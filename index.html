@@ -41,6 +41,19 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+toastr.options = {
+  closeButton: true,
+  progressBar: true,
+  positionClass: 'toast-top-right',
+  timeOut: 3000, // 3 seconds
+  extendedTimeOut: 1000,
+};
+</script>
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
@@ -79,7 +92,9 @@
             <img style="height: 100px" src="assets/img/FIXI-1-copy-1-_2_.png " alt="Logo" />
             
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          <a href="#" class="register-btn">Register</a>
+          
+         <!-- this is the  register-btn -->
+          <a href="register.html" class="register-btn">Join Waitlist</a>  
         </nav>
       </div>
     </header>
@@ -107,14 +122,16 @@
               class="col-lg-6 d-flex flex-column justify-content-center"
               data-aos="fade-in"
             >
-              <h1 class="custom-h1">FIXIMAMI</h1>
+              <h1 class="custom-h1">Fiximami</h1>
               <h1 style="color: #04f1aa">
                 Connecting You To <br />
                 Ghana's Best Artisans & <br />
                 Unique Product
               </h1>
+              <p style="color: #ffffff;">Find top artisans and unique Ghana-made products with Fiximami. Bridging talent and need, we make it easy to connect, explore, and thrive!</p>
               <div class="d-flex">
-                <a href="#" class="btn-get-started">Register Now</a>
+                
+                <a href="register.html" class="btn-get-started">Join Waitlist</a>
               </div>
             </div>
           </div>
@@ -155,10 +172,11 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          
         "
       >
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <h1 style="color: black">Countdown</h1>
+          <h1 style="color: black"><strong> Countdown</strong></h1>
           <p style="color: black">
             Join the waitlist to be first to know when we launch
           </p>
@@ -173,7 +191,7 @@
     #countdown-section {
       text-align: center;
       padding: 180px 20px;
-      background-color: #f1f5f9;
+      background-color: #F1F5F9;
     }
     #countdown {
       display: flex;
@@ -185,7 +203,7 @@
       font-weight: bold;
       color: #008000; /* Green text color */
       background: transparent; /* Plain space effect */
-      border: 4px solid #008000; /* Green border */
+      
       padding: 10px 20px;
       border-radius: 10px;
       margin: 0; /* Remove extra spacing */
@@ -196,8 +214,8 @@
       color: #000; /* Black label text */
     }
   </style>
-</head>
-<body>
+
+
   <section id="countdown-section">
     <div id="countdown">
       <div>
@@ -220,240 +238,257 @@
   </section>
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
 
-
-      
+  
 
 
 
-
-
-      <section
-        id="platform"
-        style="
-          background: linear-gradient(145deg, #34A853, #144221); /* Adding a gradient from dark green to a lighter green */
-          padding: 80px 20px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        "
-      >
-        <div
-          class="container"
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-          "
-        >
-          <!-- Phone Image Section -->
-          <div style="flex: 1; max-width: 45%; text-align: center">
-            <img
-              src="assets/img/Frame 50.png"
-              alt="Phone Mockup"
-              style="
-                width: 100%;
-                max-width: 300px;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-              "
-            />
-            <div
-              style="
-                position: absolute;
-                top: 40%;
-                left: 5%;
-                background-color: #4aaf80;
-                color: #fff;
-                padding: 10px 20px;
-                border-radius: 25px;
-                font-weight: bold;
-              "
-            >
-              Esther Oppongwaa <br />
-              Carpenter
-            </div>
-         
-          </div>
-
-          <!-- Text Section -->
-          <div style="flex: 1; max-width: 50%; padding-left: 30px">
-            <h2
-              style="
-                font-size: 2.5rem;
-                color: #fff;
-                margin-bottom: 20px;
-                font-weight: bold;
-              "
-            >
-              Your One-Stop Platform for Skilled Talent & Ghana-Made Goods
-            </h2>
-            <p style="font-size: 1rem; color: #fff; line-height: 1.6">
-              Id turpis ante nunc, id tempor. Diam, eros, eget suspendisse dolor
-              tellus. Diam fringilla sed volutpat facilisi. Pulvinar volutpat
-              facilisis vel eros. Auctor metus sed auctor tortor sed nulla. Uma
-              massa eu vel blandit sed nisi gravida. Imperdiet parturient at
-              purus bibendum risus auctor lacus tristique arcu. Arcu hac cursus
-              faucibus id. Eu integer parturient risus magna eget massa. Risus
-              molestie tempor, faucibus non ultricies. Nam vel mattis quis dui,
-              condimentum mi volutpat at aliquam.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
-      id="expertise"
+  <section
+  id="platform"
+  style="
+    background: linear-gradient(145deg, #34A853, #144221);
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  "
+>
+  <div
+    class="container"
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 40px; /* Vertical spacing for wrapping */
+      column-gap: 40px; /* Horizontal spacing */
+    "
+  >
+    <!-- Phone Image Section -->
+    <div
       style="
-        padding: 60px 20px;
-        background-color: #f7f9fc;
-        text-align: center;
+        flex: 0 1 40%; /* Flexible width: occupies up to 40% */
+        max-width: 40%; /* Restrict to 40% of parent */
+        text-align: left;
+      "
+    >
+      <img
+        src="assets/img/Group 133.png"
+        alt="Phone Mockup"
+        style="
+          width: 100%; /* Responsive size */
+          max-width: 400px; /* Restrict maximum width */
+          border-radius: 10px;
+        "
+      />
+    </div>
+
+    <!-- Text Section -->
+    <div
+      style="
+        flex: 0 1 55%; /* Flexible width: occupies up to 55% */
+        max-width: 55%; /* Restrict to 55% of parent */
+        padding-left: 20px; /* Additional space from the image */
       "
     >
       <h2
         style="
           font-size: 2.5rem;
-          margin-bottom: 40px;
+          color: #fff;
+          margin-bottom: 20px;
           font-weight: bold;
-          color: #2c3e50;
         "
       >
-        What to Expert?
+        Your One-Stop Platform for Skilled Talent & Ghana-Made Goods
       </h2>
-      <div
-        class="container"
-        style="
-          display: flex;
-          justify-content: space-between;
-          gap: 80px;
-          flex-wrap: wrap;
-        "
-      >
-        <!-- Card 1 -->
-        <div
-          class="card"
-          style="
-            background: radial-gradient(circle at center, #34A853, #01091A); /* Radial gradient from the center */
-            color: #fff;
-            width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-          "
-        >
-          <!-- Icon Container -->
-          <div
-            style="
-              background-color: #fff;
-              color: #34A853;
-              font-size: 3rem;
-              width: 70px;
-              height: 70px;
-              border-radius: 50%; /* Circle */
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0 auto 20px;
-            "
-          >
-            <i class="bi bi-geo-alt"></i>
-          </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 10px">
-            Discover Unique Ghana-Made Products
-          </h3>
-          <p style="font-size: 1rem; line-height: 1.6">
-            Browse and shop high-quality, locally crafted items.
-          </p>
-        </div>
-    
-        <!-- Card 2 -->
-        <div
-          class="card"
-          style="
-            background: radial-gradient(circle at center, #34A853, #01091A); /* Radial gradient from the center */
-            color: #fff;
-            width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-          "
-        >
-          <!-- Icon Container -->
-          <div
-            style="
-              background-color: #fff;
-              color: #34A853;
-              font-size: 3rem;
-              width: 70px;
-              height: 70px;
-              border-radius: 50%; /* Circle */
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0 auto 20px;
-            "
-          >
-            <i class="bi bi-person-workspace"></i>
-          </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 10px">
-            Find the Best Artisans & Skilled Workers
-          </h3>
-          <p style="font-size: 1rem; line-height: 1.6">
-            From carpenters to makeup artists, electricians to fashion designers—
-            we’ve got you covered.
-          </p>
-        </div>
+      <p style="font-size: 1.5rem; color: #fff; line-height: 1.6">
+        Id turpis ante nunc, id tempor. Diam, eros, eget suspendisse dolor
+        tellus. Diam fringilla sed volutpat facilisi. Pulvinar volutpat
+        facilisis vel eros. Auctor metus sed auctor tortor sed nulla. Uma
+        massa eu vel blandit sed nisi gravida. Imperdiet parturient at
+        purus bibendum risus auctor lacus tristique arcu. Arcu hac cursus
+        faucibus id. Eu integer parturient risus magna eget massa. Risus
+        molestie tempor, faucibus non ultricies. Nam vel mattis quis dui,
+        condimentum mi volutpat at aliquam.
+      </p>
+    </div>
+  </div>
+</section>
 
+
+
+
+
+<section
+id="expertise"
+style="
+  padding: 60px 20px;
+  background-color: #f7f9fc;
+  text-align: center;
+"
+>
+<h2
+  style="
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: poppins;
+  "
+>
+  What to Expert?
+</h2>
+<div
+  class="container"
+  style="
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    class="card"
+    style="
+      background: radial-gradient(circle at center, #34A853, #01091A); 
+      color: #fff;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      font: poppins;
+    "
+  >
+    <!-- Icon Container -->
+    <div
+      style="
+        background-color: #34A853;
+        font-size: 4rem;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 40px;
+        margin-top: 30px;
         
-    
-        <!-- Card 3 -->
-        <div
-          class="card"
-          style="
-            background: radial-gradient(circle at center, #34A853, #01091A); /* Radial gradient from the center */
-            color: #fff;
-            width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-          "
-        >
-          <!-- Icon Container -->
-          <div
-            style="
-              background-color: #fff;
-              color: #34A853;
-              font-size: 3rem;
-              width: 70px;
-              height: 70px;
-              border-radius: 50%; /* Circle */
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0 auto 20px;
-            "
-          >
-            <i class="bi bi-people"></i>
-          </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 10px">
-            Bridge the Gap Between Talent and Need
-          </h3>
-          <p style="font-size: 1rem; line-height: 1.6">
-            Whether you’re hiring or showcasing your skills, our platform makes
-            it effortless.
-          </p>
-        </div>
-      </div>
-    </section>
+      "
+    >
+      <!-- Custom Icon -->
+      <img
+        src="assets/img/hugeicons_periscope.png"
+        alt="Discover Products"
+        style="width: 70px; height: 70px; border-radius: 50%;"
+      />
+    </div>
+    <h3 style="font-size: 1.5rem; margin-bottom: 10px">
+      Discover Unique Ghana-Made Products
+    </h3>
+    <p style="font-size: 1rem; line-height: 1.6">
+      Browse and shop high-quality, locally crafted items.
+    </p>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    class="card"
+    style="
+      background: radial-gradient(circle at center, #34A853, #01091A);
+      color: #fff;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      font: poppins;
+    "
+  >
+    <!-- Icon Container -->
+    <div
+      style="
+        background-color: #34A853;
+        font-size: 3rem;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 40px;
+        margin-top: 35px;
+      
+      "
+    >
+      <!-- Custom Icon -->
+      <img
+        src="assets/img/mdi_worker.png"
+        alt="Find Artisans"
+        style="width: 70px; height: 70px; border-radius: 50%;"
+      />
+    </div>
+    <h3 style="font-size: 1.5rem; margin-bottom: 10px">
+      Find the Best Artisans & Skilled Workers
+    </h3>
+    <p style="font-size: 1rem; line-height: 1.6">
+      From carpenters to makeup artists, electricians to fashion designers—
+      we’ve got you covered.
+    </p>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    class="card"
+    style="
+      background: radial-gradient(circle at center, #34A853, #01091A);
+      color: #fff;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      font-family: poppins;
+    "
+  >
+    <!-- Icon Container -->
+    <div
+      style="
+        background-color: #34A853;
+        font-size: 3rem;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 40px;
+        margin-top: 30px;
+
+      "
+    >
+      <!-- Custom Icon -->
+      <img
+        src="assets/img/icon-park-solid_connect@2x.png"
+        alt="Bridge Talent and Need"
+        style="width: 70px; height: 70px; border-radius: 50%;"
+      />
+    </div>
+    <h3 style="font-size: 1.5rem; margin-bottom: 10px">
+      Bridge the Gap Between Talent and Need
+    </h3>
+    <p style="font-size: 1rem; line-height: 1.6">
+      Whether you’re hiring or showcasing your skills, our platform makes
+      it effortless.
+    </p>
+  </div>
+</div>
+</section>
+
 
 
     <section
@@ -490,7 +525,7 @@
       fast, easy, and free!
     </p>
     <a
-      href="#register"
+      href="register.html"
       style="
         display: inline-block;
         padding: 15px 30px;
@@ -501,8 +536,9 @@
         text-decoration: none;
         transition: background-color 0.2s ease, color 0.2s ease;
       "
-      onmouseover="this.style.backgroundColor='#34A853'; this.style.color='#fff';"
-      onmouseout="this.style.backgroundColor='#fff'; this.style.color='#34A853';"
+         onmouseover="this.style.backgroundColor='#34A853'; this.style.color='#fff';"
+         onmouseout="this.style.backgroundColor='#fff'; this.style.color='#34A853';"
+   
     >
       Register Now
     </a>
@@ -534,8 +570,8 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Socials</h4>
             <ul>
-              <li><a href="#">Linkedin</a></li>
-              <li><a href="#">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/fiximami/">Linkedin</a></li>
+              <li><a href="https://www.instagram.com/fiximami56?igsh=MWNuYmI2bGVkbnVqYg==">Instagram</a></li>
               <li><a href="#">Twitter</a></li>
               <li><a href="#">Tiktok</a></li>
              

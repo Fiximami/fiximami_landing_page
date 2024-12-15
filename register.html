@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Waitlist Form</title>
+  <!-- Link to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  
+  <script>
+  toastr.options = {
+    closeButton: true,
+    progressBar: true,
+    positionClass: 'toast-top-right',
+    timeOut: 3000, // 3 seconds
+    extendedTimeOut: 1000,
+  };
+  </script>
+  <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+      background: url('./assets/img/Landing\ Page\ -\ 15\ \(1\).jpg') no-repeat center center/cover; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: linear-gradient(#FFFFFF,#C8FFEE,#D1FFF1);
+      border-radius: 20px;
+      padding: 70px 50px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+
+    .form-container h2 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #070707;
+      margin-bottom: 20px;
+    }
+
+    .form-container input {
+       background: black; 
+       color: white;
+      width: 60%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .form-container input:focus {
+      border-color: #00b289;
+    }
+
+    /* .form-container .radio-group {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .radio-group label {
+      margin: 0 10px;
+      font-size: 14px;
+      color: #555555;
+      cursor: pointer;
+    }
+
+    .radio-group input[type="radio"] {
+      margin-right: 5px;
+    } */
+
+    .radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers everything horizontally */
+  margin-bottom: 10px;
+}
+
+.radio-text {
+  margin-right: 1px; /* Adds space between the text and the radio buttons */
+  font-size: 14px;
+  color: #050505; /* Text color */
+  font-weight: 500;
+}
+
+.radio-group label {
+  /* margin: 0 px;     Adds space between the radio options */
+  font-size: 14px;
+  color: #0c0707;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px; /* Adds space between radio button and label */
+}
+
+
+    .form-container .close-button {
+      background: #00b289;
+      color: #ffffff;
+      font-size: 16px;
+      padding: 10px 10px;
+      border: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      position: absolute; top: 35px; right: 20px;
+    }
+
+    .form-container .join-button {
+      background: #00b289;
+      color: #ffffff;
+      font-size: 16px;   
+      cursor: pointer;
+      width: 70%;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    
+    .form-container button:hover {
+      background: #008f6d;
+    }
+
+    .form-container p {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888888;
+    }
+
+    .form-container .close-button:hover {
+       border: #00b289;
+        padding: 15px 25px;
+        background-color: #ffffff;
+        color: black;
+        text-decoration: none;
+        
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <button class="close-button" onclick="closeForm()"><strong>Close</strong></button>
+  <br>
+  <h2>Join the Waitlist for the release of the system!</h2>
+  <form id="waitlistForm" method="POST">
+    <input type="text" name= "name" placeholder="👤 Elijah Santa Nansuuri" required>
+<input type="tel" placeholder="📞 Phone" name ="phone" required>
+<input type="email" placeholder="📧 Email" name="email" required>
+
+<div class="radio-group">
+    <span class="radio-text">Join the waitlist as:</span>
+    <label>
+      <input type="radio" name="role" value="user" required>
+      User
+    </label>
+    <label>
+      <input type="radio" name="role" value="artisan" required>
+      Artisan
+    </label>
+  </div>
+  
+    <button class="join-button" type="submit">
+      Join waitlist <span>&#x27A4;</span>
+    </button>
+  </form>
+  <p>200+ people joined</p>
+</div>
+
+<script>
+$(document).ready(function () {
+  $('#waitlistForm').on('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const formData = $(this).serialize(); // Collect form data
+
+    $.ajax({
+      url: 'logic/register.php', // Your PHP script
+      type: 'POST',
+      data: formData,
+      dataType: 'json', // Expect JSON response
+      success: function (response) {
+        if (response.status === 'success') {
+          toastr.success(response.message, '✔ Success');
+          setTimeout(() => {
+            window.location.href = 'index.html'; // Redirect after success
+          }, 3000); // Delay for user to see the notification
+        } else {
+          toastr.error(response.message, '✖ Error');
+        }
+      },
+      error: function () {
+        toastr.error('An unexpected error occurred. Please try again.', '✖ Error');
+      },
+    });
+  });
+});
+
+
+</script>
+
+</body>
+</html>

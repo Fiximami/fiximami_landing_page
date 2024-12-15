@@ -139,10 +139,10 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-.header {
+/* .header {
   --background-color: rgba(255, 255, 255, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
@@ -167,7 +167,7 @@ h6 {
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
-}
+} */
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
@@ -822,7 +822,6 @@ section,
   font-weight: 900;
   line-height: 56px;
   letter-spacing: 3px;
-  color: color-mix(in srgb, var(--heading-color), transparent 30%);
 }
 
 .hero h1 span {
@@ -833,7 +832,7 @@ section,
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -1213,179 +1212,8 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Gallery Section
---------------------------------------------------------------*/
-.gallery .gallery-item {
-  overflow: hidden;
-  border-right: 3px solid var(--background-color);
-  border-bottom: 3px solid var(--background-color);
-}
-
-.gallery .gallery-item img {
-  transition: all ease-in-out 0.4s;
-}
-
-.gallery .gallery-item:hover img {
-  transform: scale(1.1);
-}
 
 
 
-/*--------------------------------------------------------------
-# Team Section
---------------------------------------------------------------*/
-.team .member {
-  position: relative;
-}
-
-.team .member .pic {
-  overflow: hidden;
-  margin-bottom: 50px;
-}
-
-.team .member .member-info {
-  background-color: var(--surface-color);
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  bottom: -50px;
-  left: 20px;
-  right: 20px;
-  padding: 20px 15px;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.team .member h4 {
-  font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 16px;
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.team .member h4::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 60%);
-  bottom: 0;
-  left: 0;
-}
-
-.team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-
-.team .member .social {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-}
-
-.team .member .social a {
-  transition: color 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.team .member .social a:hover {
-  color: var(--accent-color);
-}
-
-.team .member .social i {
-  font-size: 16px;
-  margin: 0 2px;
-}
 
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-item+.info-item {
-  margin-top: 40px;
-}
-
-.contact .info-item i {
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.contact .php-email-form {
-  height: 100%;
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
