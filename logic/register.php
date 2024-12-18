@@ -1,6 +1,6 @@
 <?php
-require './database/db.php'; // Database connection class
-require './logic/userReg.php'; // User registration class
+require '../database/db.php'; // Database connection class
+require '../logic/userReg.php'; // User registration class
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $db = (new Database())->connect();
