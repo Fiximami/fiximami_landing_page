@@ -654,41 +654,34 @@ style="
     <script src="assets/js/main.js"></script>
   </body>
 
-  <script>
-    // Set the target date and time for the countdown
-    const targetDate = new Date("2024-12-31T23:59:59").getTime();
+ <script>
+  // Calculate the target date as 6 months from now
+  const now = new Date();
+  const targetDate = new Date(now.setMonth(now.getMonth() + 6)).getTime();
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const timeRemaining = targetDate - now;
+  function updateCountdown() {
+    const currentTime = new Date().getTime();
+    const timeRemaining = targetDate - currentTime;
 
-      if (timeRemaining > 0) {
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    if (timeRemaining > 0) {
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        // Update the countdown values in the HTML
-        document.getElementById("days").textContent =
-          days < 10 ? `0${days}` : days;
-        document.getElementById("hours").textContent =
-          hours < 10 ? `0${hours}` : hours;
-        document.getElementById("minutes").textContent =
-          minutes < 10 ? `0${minutes}` : minutes;
-        document.getElementById("seconds").textContent =
-          seconds < 10 ? `0${seconds}` : seconds;
-      } else {
-        // If the countdown is over, display a message
-        document.getElementById("countdown").innerHTML =
-          "<h3>The countdown has ended!</h3>";
-      }
+      // Update the countdown values in the HTML
+      document.getElementById("days").textContent = days < 10 ? `0${days}` : days;
+      document.getElementById("hours").textContent = hours < 10 ? `0${hours}` : hours;
+      document.getElementById("minutes").textContent = minutes < 10 ? `0${minutes}` : minutes;
+      document.getElementById("seconds").textContent = seconds < 10 ? `0${seconds}` : seconds;
+    } else {
+      // If the countdown is over, display a message
+      document.getElementById("countdown").innerHTML = "<h3>The countdown has ended!</h3>";
     }
+  }
 
-    // Update the countdown every second
-    setInterval(updateCountdown, 1000);
-  </script>
+  // Update the countdown every second
+  setInterval(updateCountdown, 1000);
+</script>
+
 </html>
