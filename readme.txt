@@ -1,1 +1,1 @@
-This is the landing page for fiximami
+This is the Waiting_List site for fiximami
