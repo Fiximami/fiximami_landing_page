@@ -1,2 +1,5 @@
-deployment:
-  branch: main
+deploy:
+  stage: production
+  server: "your-local-server"
+  remote_stage: staging
+  remote_server: "remote-server"
