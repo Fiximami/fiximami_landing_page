@@ -544,9 +544,8 @@
 
   <script>
     const currentDate = new Date();
-    const targetDate = new Date(
-      currentDate.getTime() + 181 * 24 * 60 * 60 * 1000
-    ).getTime();
+    const targetDate = new Date("2025-12-20T00:00:00").getTime(); // Set a fixed launch date in the future (e.g. Dec 31, 2024 at 11:59 PM)
+
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -580,7 +579,7 @@
         ).innerHTML = `<h3 style="color: red; font-size: 2rem;">The countdown has ended!</h3>`;
       }
     }
-
+    // Call the function on page load and then every second
     window.onload = function () {
       updateCountdown();
       setInterval(updateCountdown, 1000);
